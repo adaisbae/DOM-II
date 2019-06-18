@@ -2,7 +2,8 @@
 let logo = document.getElementsByClassName('logo-heading');
 let images = document.querySelectorAll('img');
 let signUpButton = document.getElementsByClassName('btn');
-let destinationText = document.querySelector('.content-destination h2');
+let destinationHeader = document.querySelector('.content-destination h2');
+let words = document.getElementsByTagName('p');
 
 // Callback Functions
 
@@ -18,6 +19,14 @@ function hideTarget(event){
     event.target.style.display = 'none';
 }
 
+function changeText(element){
+    element.innertext = 'Text has changed!';
+}
+
+function coolText(event){
+    event.target.innerText = 'Melissa is an awesome developer';
+}
+
 
 // Event Listeners
 
@@ -28,5 +37,13 @@ logo[0].addEventListener('mouseover', blueFont);
 for (i = 0; i < signUpButton.length; i++){
 signUpButton[i].addEventListener('click', pinkBackground)};
 
+// dbclick
 // tried keydown and select - did not work
-destinationText.addEventListener('click', hideTarget);
+destinationHeader.addEventListener('dblclick', hideTarget);
+
+// keydown
+for(i = 0; i < words.length; i++){
+words[i].addEventListener('click', coolText);
+}
+
+
