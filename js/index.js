@@ -6,7 +6,6 @@ let destinationText = document.querySelector('.content-destination h2');
 
 // Callback Functions
 
-// Change the font color
 function blueFont(event){
     event.target.style.color = 'blue';
 }
@@ -15,6 +14,9 @@ function pinkBackground(event){
     event.target.style.background = 'pink';    
   };
 
+function hideTarget(event){
+    event.target.style.display = 'none';
+}
 
 
 // Event Listeners
@@ -26,5 +28,5 @@ logo[0].addEventListener('mouseover', blueFont);
 for (i = 0; i < signUpButton.length; i++){
 signUpButton[i].addEventListener('click', pinkBackground)};
 
-// keydown
-
+// tried keydown and select - did not work
+destinationText.addEventListener('click', hideTarget);
