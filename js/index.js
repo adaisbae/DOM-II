@@ -34,9 +34,9 @@ function coolText(event){
 // mouseover
 logo[0].addEventListener('mouseover', blueFont);
 
-// click
+// keydown
 for (i = 0; i < signUpButton.length; i++){
-signUpButton[i].addEventListener('click', pinkBackground)};
+signUpButton[i].addEventListener('keydown', pinkBackground)};
 
 //dblclick
 for(i=0; i < headers.length; i++){
