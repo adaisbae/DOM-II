@@ -4,6 +4,7 @@ let images = document.querySelectorAll('img');
 let signUpButton = document.getElementsByClassName('btn');
 let destinationHeader = document.querySelector('.content-destination h2');
 let words = document.getElementsByTagName('p');
+let headers = document.querySelectorAll('h2');
 
 // Callback Functions
 
@@ -37,13 +38,7 @@ logo[0].addEventListener('mouseover', blueFont);
 for (i = 0; i < signUpButton.length; i++){
 signUpButton[i].addEventListener('click', pinkBackground)};
 
-// dbclick
-// tried keydown and select - did not work
-destinationHeader.addEventListener('dblclick', hideTarget);
-
-// keydown
-for(i = 0; i < words.length; i++){
-words[i].addEventListener('click', coolText);
-}
-
+//dblclick
+for(i=0; i < headers.length; i++){
+    headers[i].addEventListener('dblclick', coolText)};
 
